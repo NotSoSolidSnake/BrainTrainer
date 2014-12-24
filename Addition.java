@@ -1,98 +1,172 @@
 import java.util.Scanner;
 public class Addition {
 
+	String yesOrNo;
+	Scanner userInput = new Scanner(System.in);
+
 	public Addition() {
+		// TODO: put shit here later I guess.
+	}
 
-		Scanner userInput = new Scanner(System.in);
-		System.out.println("\nInput the amount of integers in your additin problem\n");
-		int input = userInput.nextInt();
+	public void decide() {
 
-		if (input == 1)
+		System.out.println("\nHow many integers do you want in your problem?");
+		System.out.println("\nType 'one', 'two', or 'three'.");
+		String input = userInput.nextLine();
+
+		if (input.equalsIgnoreCase("one"))
 			one();
-		if (input == 2)
+		if (input.equalsIgnoreCase("two"))
 			two();
-		if (input == 3)
+		if (input.equalsIgnoreCase("three"))
 			three();
 	}
 
-
 	public void one() {
 
-		while (true) {
+		for (int x = 0; x < 10; x++) {
 
-		System.out.println();
-		Scanner tempAnswer = new Scanner(System.in);
+			System.out.println();
+			Scanner tempAnswer = new Scanner(System.in);
 
-		int firstInt = (int) (Math.random() * 9);
-		int secondInt = (int) (Math.random() * 9);
+			int firstInt = (int) (Math.random() * 10);
+			int secondInt = (int) (Math.random() * 10);
 
-		int answer = firstInt + secondInt;
+			int answer = firstInt + secondInt;
 
-		System.out.println("   " + firstInt);
-		System.out.println(" + " + secondInt);
-		System.out.println("-------------");
+			System.out.println("   " + firstInt);
+			System.out.println(" + " + secondInt);
+			System.out.println("-------------");
 
-		System.out.println("\nWhat is the answer to the problem?");
-		int input = tempAnswer.nextInt();
+			System.out.println("\nWhat is the answer to the problem?");
+			int input = tempAnswer.nextInt();
 
-		if (input == answer)
-			System.out.println("\nGood\n");
-		else
-			System.out.println("\nWrong\n");
+			if (input == answer)
+				System.out.println("\nGood\n");
+			else {
+				System.out.println("\nWrong\n");
+				recursiveLoop(firstInt, secondInt, answer);
+			}
 		}
+
+		System.out.println("Do you want to keep going?");
+		System.out.println("Yes to continue. No to quit.\n");
+		System.out.println("Or, type 'menu' to return to the menu.");
+
+		yesOrNo = userInput.nextLine();
+
+		if (yesOrNo.equalsIgnoreCase("yes"))
+			one();
+		if (yesOrNo.equalsIgnoreCase("no"))
+			return;
+		if (yesOrNo.equalsIgnoreCase("menu"))
+			decide();
 	}
 
 	public void two() {
+	
+		for (int x = 0; x < 10; x++) {
 
-		while (true) {
+			System.out.println();
+			Scanner tempAnswer = new Scanner(System.in);
 
-		System.out.println();
-		Scanner tempAnswer = new Scanner(System.in);
+			int firstInt = (int) (Math.random() * 100);
+			int secondInt = (int) (Math.random() * 100);
 
-		int firstInt = (int) (Math.random() * 99);
-		int secondInt = (int) (Math.random() * 99);
+			int answer = firstInt + secondInt;
 
-		int answer = firstInt + secondInt;
+			System.out.println("   " + firstInt);
+			System.out.println(" + " + secondInt);
+			System.out.println("-------------");
 
-		System.out.println("   " + firstInt);
-		System.out.println(" + " + secondInt);
-		System.out.println("-------------");
+			System.out.println("\nWhat is the answer to the problem?");
+			int input = tempAnswer.nextInt();
 
-		System.out.println("\nWhat is the answer to the problem?");
-		int input = tempAnswer.nextInt();
-
-		if (input == answer)
-			System.out.println("\nGood\n");
-		else
-			System.out.println("\nWrong\n");
-
+			if (input == answer)
+				System.out.println("\nGood\n");
+			else {
+				System.out.println("\nWrong\n");
+				recursiveLoop(firstInt, secondInt, answer);
+			}
 		}
+
+		System.out.println("Do you want to keep going?");
+		System.out.println("Yes to continue. No to quit.\n");
+		System.out.println("Or, type 'menu' to return to the menu.");
+
+		yesOrNo = userInput.nextLine();
+
+		if (yesOrNo.equalsIgnoreCase("yes"))
+			two();
+		if (yesOrNo.equalsIgnoreCase("no"))
+			return;
+		if (yesOrNo.equalsIgnoreCase("menu"))
+			decide();
 	}
 
 	public void three() {
+	
+		for (int x = 0; x < 10; x++) {
 
-		while (true) {
+			System.out.println();
+			Scanner tempAnswer = new Scanner(System.in);
 
-		System.out.println();
-		Scanner tempAnswer = new Scanner(System.in);
+			int firstInt = (int) (Math.random() * 1000);
+			int secondInt = (int) (Math.random() * 1000);
 
-		int firstInt = (int) (Math.random() * 999);
-		int secondInt = (int) (Math.random() * 999);
+			int answer = firstInt + secondInt;
 
-		int answer = firstInt + secondInt;
+			System.out.println("   " + firstInt);
+			System.out.println(" + " + secondInt);
+			System.out.println("-------------");
 
-		System.out.println("   " + firstInt);
-		System.out.println(" + " + secondInt);
-		System.out.println("-------------");
+			System.out.println("\nWhat is the answer to the problem?");
+			int input = tempAnswer.nextInt();
 
-		System.out.println("\nWhat is the answer to the problem?");
-		int input = tempAnswer.nextInt();
-
-		if (input == answer)
-			System.out.println("\nGood\n");
-		else
-			System.out.println("\nWrong\n");
-
+			if (input == answer)
+				System.out.println("\nGood\n");
+			else {
+				System.out.println("\nWrong\n");
+				recursiveLoop(firstInt, secondInt, answer);
+			}
 		}
+
+		System.out.println("Do you want to keep going?");
+		System.out.println("Yes to continue. No to quit.\n");
+		System.out.println("Or, type 'menu' to return to the menu.");
+
+		yesOrNo = userInput.nextLine();
+
+		if (yesOrNo.equalsIgnoreCase("yes"))
+			three();
+		if (yesOrNo.equalsIgnoreCase("no"))
+			return;
+		if (yesOrNo.equalsIgnoreCase("menu"))
+			decide();
+	
+	}
+
+	int recursiveLoop(int firstInt, int secondInt, int answer) {
+
+			Scanner tempAnswer = new Scanner(System.in);
+
+			System.out.println("   " + firstInt);
+			System.out.println(" + " + secondInt);
+			System.out.println("-------------");
+
+			System.out.println("\nWhat is the answer to the problem?");
+
+			int input = tempAnswer.nextInt();
+
+			if (input == answer) 
+			{
+				System.out.println("\nGood\n");
+				return answer; 
+			}
+			else {
+				System.out.println("\nWrong\n");
+				recursiveLoop(firstInt, secondInt, answer);				
+			}
+			return 0;
 	}
 }
