@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Addition {
+public class Subtraction {
 
 	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
@@ -28,10 +28,10 @@ public class Addition {
 			int firstInt = (int) (Math.random() * 10);
 			int secondInt = (int) (Math.random() * 10);
 
-			int answer = firstInt + secondInt;
+			int answer = firstInt - secondInt;
 
 			System.out.println("   " + firstInt);
-			System.out.println(" + " + secondInt);
+			System.out.println(" - " + secondInt);
 			System.out.println("-------------");
 
 			System.out.println("\nWhat is the answer to the problem?");
@@ -48,19 +48,19 @@ public class Addition {
 	}
 
 	private void two() {
-	
+
 		for (int x = 0; x < 10; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 100);
-			int secondInt = (int) (Math.random() * 100);
+			int firstInt = (int) (Math.random() * 10);
+			int secondInt = (int) (Math.random() * 10);
 
-			int answer = firstInt + secondInt;
+			int answer = firstInt - secondInt;
 
 			System.out.println("   " + firstInt);
-			System.out.println(" + " + secondInt);
+			System.out.println(" - " + secondInt);
 			System.out.println("-------------");
 
 			System.out.println("\nWhat is the answer to the problem?");
@@ -71,25 +71,25 @@ public class Addition {
 			else {
 				System.out.println("\nWrong\n");
 				recursiveLoop(firstInt, secondInt, answer);
-			}	
-		}
+			}
+		}	
 		repeat();
 	}
 
 	private void three() {
-	
+
 		for (int x = 0; x < 10; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 1000);
-			int secondInt = (int) (Math.random() * 1000);
+			int firstInt = (int) (Math.random() * 10);
+			int secondInt = (int) (Math.random() * 10);
 
-			int answer = firstInt + secondInt;
+			int answer = firstInt - secondInt;
 
 			System.out.println("   " + firstInt);
-			System.out.println(" + " + secondInt);
+			System.out.println(" - " + secondInt);
 			System.out.println("-------------");
 
 			System.out.println("\nWhat is the answer to the problem?");
@@ -107,15 +107,15 @@ public class Addition {
 
 	private int recursiveLoop(int firstInt, int secondInt, int answer) {
 
-		Scanner tempAnswer = new Scanner(System.in);
+			Scanner tempAnswer = new Scanner(System.in);
 
-		System.out.println("   " + firstInt);
-		System.out.println(" + " + secondInt);
-		System.out.println("-------------");
+			System.out.println("   " + firstInt);
+			System.out.println(" - " + secondInt);
+			System.out.println("-------------");
 
-		System.out.println("\nWhat is the answer to the problem?");
+			System.out.println("\nWhat is the answer to the problem?");
 
-		int input = tempAnswer.nextInt();
+			int input = tempAnswer.nextInt();
 
 			if (input == answer) 
 			{
@@ -126,8 +126,8 @@ public class Addition {
 				System.out.println("\nWrong\n");
 				recursiveLoop(firstInt, secondInt, answer);				
 			}
-		return 0;
-	}
+			return 0;
+	}		
 
 	private void repeat() {
 
