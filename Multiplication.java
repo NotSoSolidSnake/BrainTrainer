@@ -3,11 +3,13 @@ public class Multiplication {
 
 	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
+	Decide userDecision = new Decide();	
 
 	public void decide() {
 
-		System.out.println("What kind of problem do you want?");
+		System.out.println("\nWhat kind of problem do you want?");
 		System.out.println("\nType 'basic' for basic multiplication tables \n'two' for two-by-one \n'three' for three-by-one\nOr, 'Arthur' for practicing multiplication tables 0-10 only");
+		System.out.println("\nType 'home' to go back to the selection screen.\n");
 		String input = userInput.nextLine();
 
 		if (input.equalsIgnoreCase("basic"))
@@ -18,6 +20,8 @@ public class Multiplication {
 			three();
 		if (input.equalsIgnoreCase("arthur"))
 			arthur();	
+		if (input.equalsIgnoreCase("home"))
+			userDecision.startUp();
 	}
 
 	private void basic() {
@@ -164,7 +168,7 @@ public class Multiplication {
 
 		System.out.println("Do you want to keep going?");
 		System.out.println("Yes to continue. No to quit.\n");
-		System.out.println("Or, type 'menu' to return to the menu.");
+		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");
 
 		yesOrNo = userInput.nextLine();
 
@@ -174,5 +178,7 @@ public class Multiplication {
 			return;
 		if (yesOrNo.equalsIgnoreCase("menu"))
 			decide();
-		}
+		if (yesOrNo.equalsIgnoreCase("home"))
+			userDecision.startUp();	
+	}
 }

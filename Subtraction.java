@@ -3,11 +3,13 @@ public class Subtraction {
 
 	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
+	Decide userDecision = new Decide();	
 
 	public void decide() {
 
 		System.out.println("\nHow many integers do you want in your problem?");
 		System.out.println("\nType 'one', 'two', or 'three'.");
+		System.out.println("Type 'home' to go back to the selection screen.\n");
 		String input = userInput.nextLine();
 
 		if (input.equalsIgnoreCase("one"))
@@ -16,6 +18,8 @@ public class Subtraction {
 			two();
 		if (input.equalsIgnoreCase("three"))
 			three();
+		if (input.equalsIgnoreCase("home"))
+			userDecision.startUp();		
 	}
 
 	private void one() {
@@ -133,7 +137,7 @@ public class Subtraction {
 
 		System.out.println("Do you want to keep going?");
 		System.out.println("Yes to continue. No to quit.\n");
-		System.out.println("Or, type 'menu' to return to the menu.");
+		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");
 
 		yesOrNo = userInput.nextLine();
 
@@ -143,5 +147,7 @@ public class Subtraction {
 			return;
 		if (yesOrNo.equalsIgnoreCase("menu"))
 			decide();
+		if (yesOrNo.equalsIgnoreCase("home"))
+			userDecision.startUp();		
 	}
 }
