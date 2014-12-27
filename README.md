@@ -15,7 +15,6 @@ the arthur mode is from the book Secrets of Mental Math (The entire math section
 You only need to have mastered the multiplication tables 0-10 in the book.
 
 TODO Later:
-Let the user return back to the main method and choose a different drill
 add division 
 everthing else
 
