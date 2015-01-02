@@ -7,10 +7,11 @@ public class Decide {
 	Addition add = new Addition();
 	Subtraction subtract = new Subtraction();
 	Multiplication multiply = new Multiplication();
+	PhoneNumberGenerator number = new PhoneNumberGenerator();
 
 
 	System.out.println("\nWelcome to the Brain Trainer Program!\n");
-	System.out.println("Here are your choice of challenges: \nAddition \nSubtraction\nMultiplication");
+	System.out.println("Here are your choice of challenges: \nAddition \nSubtraction\nMultiplication\nMemorize Phone Number");
 	System.out.println("\nWhat would you like to do?\n");
 
 	String choice = input.nextLine();
@@ -21,5 +22,7 @@ public class Decide {
 		subtract.decide();
 	if (choice.equalsIgnoreCase("multiplication") || choice.equalsIgnoreCase("multiply") )
 		multiply.decide();
+	if (choice.equalsIgnoreCase("phone number") || choice.equalsIgnoreCase("number") )
+		number.decide();
 	}
 }
