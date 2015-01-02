@@ -173,7 +173,7 @@ public class Multiplication {
 		yesOrNo = userInput.nextLine();
 
 		if (yesOrNo.equalsIgnoreCase("yes"))
-			basic();
+			decide();
 		if (yesOrNo.equalsIgnoreCase("no"))
 			return;
 		if (yesOrNo.equalsIgnoreCase("menu"))

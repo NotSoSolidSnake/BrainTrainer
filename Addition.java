@@ -142,7 +142,7 @@ public class Addition {
 		yesOrNo = userInput.nextLine();
 
 		if (yesOrNo.equalsIgnoreCase("yes"))
-			one();
+			decide();
 		if (yesOrNo.equalsIgnoreCase("no"))
 			return;
 		if (yesOrNo.equalsIgnoreCase("menu"))
