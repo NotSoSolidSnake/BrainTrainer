@@ -1,15 +1,17 @@
+import java.util.Random;
 import java.util.Scanner;
 public class PhoneNumberGenerator {
 
 	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
 	Decide userDecision = new Decide();	
+	Random rand = new Random();
 
 	public void decide() {
 
 		System.out.println("\nWhat kind of number do you want to generate?");
-		System.out.println("\nType 'random' if you want a random number, 'area code' if you want a specific area code, or 'final' if you know both the area code and first three digits.");
-		System.out.println("Type 'home' to go back to the selection screen.\n");
+		System.out.println("\nType 'random' if you want a random number, \n'area code' if you want a specific area code, \nor 'final' if you know both the area code and first three digits.");
+		System.out.println("\nType 'home' to go back to the selection screen.\n");
 		String input = userInput.nextLine();
 
 		if (input.equalsIgnoreCase("random"))
@@ -24,77 +26,59 @@ public class PhoneNumberGenerator {
 
 	private void random() {
 
-		for (int x = 0; x < 10; x++) {
+		for(int x = 0; x < 10; x++) {
 
-			int[] numbers = new int[5];
-			int[] numbers2 = new int[5];
-			int[] numbers3 = new int[5];
+			System.out.println();
 
-			int set1 = (int) (Math.random() * 1000);
-			int set2 = (int) (Math.random() * 1000);
-			int set3 = (int) (Math.random() * 10000);
+			int num1 = rand.nextInt (900) + 100;
+			int num2 = rand.nextInt (900) + 100;
+			int num3 = rand.nextInt (9000) + 1000;
 
-			numbers[x] = set1;
-			numbers2[x] = set2;
-			numbers3[x] = set3;
-		}
+			System.out.printf("%s-%s-%s", num1,num2,num3);
+		}		
+		System.out.println();
+		repeat();
 	}
 
 	private void areaCode() {
 	
-		for (int x = 0; x < 10; x++) {
+		System.out.println();
+		Scanner areaCode = new Scanner(System.in);
+		System.out.println("Input your area code: ");
+		int num1 = areaCode.nextInt();		
+
+		for(int x = 0; x < 10; x++) {
 
 			System.out.println();
-			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 100);
-			int secondInt = (int) (Math.random() * 100);
+			int num2 = rand.nextInt (900) + 100;
+			int num3 = rand.nextInt (9000) + 1000;
 
-			int answer = firstInt + secondInt;
-
-			System.out.println("   " + firstInt);
-			System.out.println(" + " + secondInt);
-			System.out.println("-------------");
-
-			System.out.println("\nWhat is the answer to the problem?");
-			int input = tempAnswer.nextInt();
-
-			if (input == answer)
-				System.out.println("\nGood\n");
-			else {
-				System.out.println("\nWrong\n");
-				recursiveLoop(firstInt, secondInt, answer);
-			}	
+			System.out.printf("%s-%s-%s", num1,num2,num3);
 		}
+		System.out.println();
 		repeat();
 	}
 
 	private void finalGen() {
 	
-		for (int x = 0; x < 10; x++) {
+		System.out.println();
+		Scanner areaCode = new Scanner(System.in);
+		System.out.println("Input your area code: ");
+		int num1 = areaCode.nextInt();		
+
+		System.out.println("Input the next three digits: ");
+		int num2 = areaCode.nextInt();		
+
+		for(int x = 0; x < 10; x++) {
 
 			System.out.println();
-			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 1000);
-			int secondInt = (int) (Math.random() * 1000);
+			int num3 = rand.nextInt (9000) + 1000;
 
-			int answer = firstInt + secondInt;
-
-			System.out.println("   " + firstInt);
-			System.out.println(" + " + secondInt);
-			System.out.println("-------------");
-
-			System.out.println("\nWhat is the answer to the problem?");
-			int input = tempAnswer.nextInt();
-
-			if (input == answer)
-				System.out.println("\nGood\n");
-			else {
-				System.out.println("\nWrong\n");
-				recursiveLoop(firstInt, secondInt, answer);
-			}
+			System.out.printf("%s-%s-%s", num1,num2,num3);
 		}
+		System.out.println();
 		repeat();
 	}
 

@@ -31,8 +31,8 @@ public class Multiplication {
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 13);
-			int secondInt = (int) (Math.random() * 13);
+			int firstInt = (int) (Math.random() * 13) + 1;
+			int secondInt = (int) (Math.random() * 13) + 1;
 
 			int answer = firstInt * secondInt;
 
@@ -55,15 +55,20 @@ public class Multiplication {
 
 	private void two() {
 
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 100);
+			int firstInt = (int) (Math.random() * 100) + 9;
 			int secondInt = (int) (Math.random() * 10);
 
 			int answer = firstInt * secondInt;
+
+			while(secondInt < 2)
+			{
+				secondInt = (int) (Math.random() * 10);
+			}
 
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);
@@ -84,15 +89,20 @@ public class Multiplication {
 
 	private void three() {
 
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 1000);
+			int firstInt = (int) (Math.random() * 1000) + 90;
 			int secondInt = (int) (Math.random() * 10);
 
 			int answer = firstInt * secondInt;
+
+			while(secondInt < 2)
+			{
+				secondInt = (int) (Math.random() * 10);
+			}
 
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);
@@ -113,7 +123,7 @@ public class Multiplication {
 
 	private void arthur() {
 
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
@@ -122,6 +132,17 @@ public class Multiplication {
 			int secondInt = (int) (Math.random() * 11);
 
 			int answer = firstInt * secondInt;
+
+			while(firstInt < 2)
+			{
+				firstInt = (int) (Math.random() * 10);
+			}
+
+			while(secondInt < 2)
+			{
+				secondInt = (int) (Math.random() * 10);
+			}
+
 
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);

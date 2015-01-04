@@ -24,13 +24,13 @@ public class Addition {
 
 	private void one() {
 
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 10);
-			int secondInt = (int) (Math.random() * 10);
+			int firstInt = (int) (Math.random() * 10) + 1;
+			int secondInt = (int) (Math.random() * 10) + 1;
 
 			int answer = firstInt + secondInt;
 
@@ -53,13 +53,13 @@ public class Addition {
 
 	private void two() {
 	
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 100);
-			int secondInt = (int) (Math.random() * 100);
+			int firstInt = (int) (Math.random() * 100) + 10;
+			int secondInt = (int) (Math.random() * 100) + 10;
 
 			int answer = firstInt + secondInt;
 
@@ -82,13 +82,13 @@ public class Addition {
 
 	private void three() {
 	
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 1000);
-			int secondInt = (int) (Math.random() * 1000);
+			int firstInt = (int) (Math.random() * 1000) + 100;
+			int secondInt = (int) (Math.random() * 1000) + 100;
 
 			int answer = firstInt + secondInt;
 
