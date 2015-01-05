@@ -3,17 +3,23 @@ public class Testing {
 	
 	public static void main(String[] args) {
 
-		Random rand = new Random();
-		for(int x = 0; x < 10; x++) {
+		Scanner userInput = new Scanner(System.in);
+		String yesOrNo;
+		System.out.println("Do you want to keep going?");
+		System.out.println("Yes to continue. No to quit.\n");
+		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");
+	
 
-			System.out.println();
+		yesOrNo = userInput.nextLine();
 
-			int num1 = rand.nextInt (900) + 100;
-			int num2 = rand.nextInt (900) + 100;
-			int num3 = rand.nextInt (9000) + 1000;
-
-			System.out.printf("%s-%s-%s", num1,num2,num3);
+		if (yesOrNo.equalsIgnoreCase("yes"))
+			decide();
+		if (yesOrNo.equalsIgnoreCase("no"))
+			return;
+		if (yesOrNo.equalsIgnoreCase("menu"))
+			decide();
+		if (yesOrNo.equalsIgnoreCase("home"))
+			userDecision.startUp();	
+		}
 	}
-			System.out.println();
-}
-}
+

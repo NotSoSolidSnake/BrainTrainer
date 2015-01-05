@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Addition {
 
-	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
 	Decide userDecision = new Decide();	
 
@@ -135,6 +134,7 @@ public class Addition {
 
 	private void repeat() {
 
+		String yesOrNo;
 		System.out.println("Do you want to keep going?");
 		System.out.println("Yes to continue. No to quit.\n");
 		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");

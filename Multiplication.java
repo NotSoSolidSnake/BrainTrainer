@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Multiplication {
 
-	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
 	Decide userDecision = new Decide();	
 
@@ -26,13 +25,13 @@ public class Multiplication {
 
 	private void basic() {
 
-		for (int x = 0; x < 10; x++) {
+		for (int x = 0; x < 50; x++) {
 
 			System.out.println();
 			Scanner tempAnswer = new Scanner(System.in);
 
-			int firstInt = (int) (Math.random() * 13) + 1;
-			int secondInt = (int) (Math.random() * 13) + 1;
+			int firstInt = (int) (Math.random() * 13);
+			int secondInt = (int) (Math.random() * 13);
 
 			int answer = firstInt * secondInt;
 
@@ -187,6 +186,7 @@ public class Multiplication {
 
 	private void repeat() {
 
+		String yesOrNo;
 		System.out.println("Do you want to keep going?");
 		System.out.println("Yes to continue. No to quit.\n");
 		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");

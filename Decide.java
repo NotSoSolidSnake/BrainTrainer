@@ -9,7 +9,6 @@ public class Decide {
 	Multiplication multiply = new Multiplication();
 	PhoneNumberGenerator number = new PhoneNumberGenerator();
 
-
 	System.out.println("\nWelcome to the Brain Trainer Program!\n");
 	System.out.println("Here are your choice of challenges: \nAddition \nSubtraction\nMultiplication\nMemorize Phone Number");
 	System.out.println("\nWhat would you like to do?\n");

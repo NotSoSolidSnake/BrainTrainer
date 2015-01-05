@@ -2,10 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 public class PhoneNumberGenerator {
 
-	private String yesOrNo;
 	private Scanner userInput = new Scanner(System.in);
 	Decide userDecision = new Decide();	
-	Random rand = new Random();
+	private Random rand = new Random();
 
 	public void decide() {
 
@@ -26,7 +25,7 @@ public class PhoneNumberGenerator {
 
 	private void random() {
 
-		for(int x = 0; x < 10; x++) {
+		for(int x = 0; x < 5; x++) {
 
 			System.out.println();
 
@@ -47,7 +46,7 @@ public class PhoneNumberGenerator {
 		System.out.println("Input your area code: ");
 		int num1 = areaCode.nextInt();		
 
-		for(int x = 0; x < 10; x++) {
+		for(int x = 0; x < 5; x++) {
 
 			System.out.println();
 
@@ -70,7 +69,7 @@ public class PhoneNumberGenerator {
 		System.out.println("Input the next three digits: ");
 		int num2 = areaCode.nextInt();		
 
-		for(int x = 0; x < 10; x++) {
+		for(int x = 0; x < 5; x++) {
 
 			System.out.println();
 
@@ -82,32 +81,9 @@ public class PhoneNumberGenerator {
 		repeat();
 	}
 
-	private int recursiveLoop(int firstInt, int secondInt, int answer) {
-
-		Scanner tempAnswer = new Scanner(System.in);
-
-		System.out.println("   " + firstInt);
-		System.out.println(" + " + secondInt);
-		System.out.println("-------------");
-
-		System.out.println("\nWhat is the answer to the problem?");
-
-		int input = tempAnswer.nextInt();
-
-			if (input == answer) 
-			{
-				System.out.println("\nGood\n");
-				return answer; 
-			}
-			else {
-				System.out.println("\nWrong\n");
-				recursiveLoop(firstInt, secondInt, answer);				
-			}
-		return 0;
-	}
-
 	private void repeat() {
 
+		String yesOrNo;
 		System.out.println("Do you want to keep going?");
 		System.out.println("Yes to continue. No to quit.\n");
 		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");
