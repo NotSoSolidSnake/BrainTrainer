@@ -62,12 +62,13 @@ public class Multiplication {
 			int firstInt = (int) (Math.random() * 100) + 9;
 			int secondInt = (int) (Math.random() * 10);
 
-			int answer = firstInt * secondInt;
 
 			while(secondInt < 2)
 			{
 				secondInt = (int) (Math.random() * 10);
 			}
+
+			int answer = firstInt * secondInt;
 
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);
@@ -96,13 +97,14 @@ public class Multiplication {
 			int firstInt = (int) (Math.random() * 1000) + 90;
 			int secondInt = (int) (Math.random() * 10);
 
-			int answer = firstInt * secondInt;
 
 			while(secondInt < 2)
 			{
 				secondInt = (int) (Math.random() * 10);
 			}
 
+			int answer = firstInt * secondInt;
+			
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);
 			System.out.println("-------------");
@@ -130,7 +132,6 @@ public class Multiplication {
 			int firstInt = (int) (Math.random() * 11);
 			int secondInt = (int) (Math.random() * 11);
 
-			int answer = firstInt * secondInt;
 
 			while(firstInt < 2)
 			{
@@ -142,6 +143,7 @@ public class Multiplication {
 				secondInt = (int) (Math.random() * 10);
 			}
 
+			int answer = firstInt * secondInt;
 
 			System.out.println("   " + firstInt);
 			System.out.println(" * " + secondInt);
