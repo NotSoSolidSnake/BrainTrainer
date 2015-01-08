@@ -3,23 +3,35 @@ public class Testing {
 	
 	public static void main(String[] args) {
 
-		Scanner userInput = new Scanner(System.in);
-		String yesOrNo;
-		System.out.println("Do you want to keep going?");
-		System.out.println("Yes to continue. No to quit.\n");
-		System.out.println("Type 'menu' to return to the menu \nor 'home' to go back and choose a different problem");
-	
+		int[] sel1 = {6, 7, 8, 9};
+		int[] sel2 = {6, 7, 8, 9};
 
-		yesOrNo = userInput.nextLine();
+		for (int x = 0; x < 50; x++) {
 
-		if (yesOrNo.equalsIgnoreCase("yes"))
-			decide();
-		if (yesOrNo.equalsIgnoreCase("no"))
-			return;
-		if (yesOrNo.equalsIgnoreCase("menu"))
-			decide();
-		if (yesOrNo.equalsIgnoreCase("home"))
-			userDecision.startUp();	
+			System.out.println();
+			Scanner tempAnswer = new Scanner(System.in);
+
+			int y = (int) (Math.random() * 4);	
+			int z = (int) (Math.random() * 4);	
+
+			int firstInt = sel1[y];
+			int secondInt = sel2[z];
+
+			int answer = firstInt * secondInt;
+
+			System.out.println("   " + firstInt);
+			System.out.println(" * " + secondInt);
+			System.out.println("-------------");
+
+			System.out.println("\nWhat is the answer to the problem?");
+			int input = tempAnswer.nextInt();
+
+			if (input == answer)
+				System.out.println("\nGood\n");
+			else {
+				System.out.println("\nWrong\n");
 		}
 	}
+}
+}
 
