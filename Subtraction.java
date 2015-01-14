@@ -67,7 +67,6 @@ public class Subtraction {
 			int firstInt = (int) (Math.random() * 100) + 10;
 			int secondInt = (int) (Math.random() * 100) + 10;
 
-			int answer = firstInt - secondInt;
 
 			if(firstInt < secondInt)
 			{
@@ -75,6 +74,8 @@ public class Subtraction {
 				firstInt = secondInt;
 				secondInt = temp;
 			}
+
+			int answer = firstInt - secondInt;
 
 			System.out.println("   " + firstInt);
 			System.out.println(" - " + secondInt);
@@ -103,7 +104,6 @@ public class Subtraction {
 			int firstInt = (int) (Math.random() * 1000) + 100;
 			int secondInt = (int) (Math.random() * 1000) + 100;
 
-			int answer = firstInt - secondInt;
 			
 			if(firstInt < secondInt)
 			{
@@ -112,6 +112,8 @@ public class Subtraction {
 				secondInt = temp;
 			}
 
+			int answer = firstInt - secondInt;
+			
 			System.out.println("   " + firstInt);
 			System.out.println(" - " + secondInt);
 			System.out.println("-------------");

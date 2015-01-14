@@ -8,9 +8,10 @@ public class Decide {
 	Subtraction subtract = new Subtraction();
 	Multiplication multiply = new Multiplication();
 	PhoneNumberGenerator number = new PhoneNumberGenerator();
+	DominicSystem dom = new DominicSystem();
 
 	System.out.println("\nWelcome to the Brain Trainer Program!\n");
-	System.out.println("Here are your choice of challenges: \nAddition \nSubtraction\nMultiplication\nMemorize Phone Number");
+	System.out.println("Here are your choice of challenges: \nAddition \nSubtraction\nMultiplication\nMemorize Phone Number\nDominic System Drills");
 	System.out.println("\nWhat would you like to do?\n");
 
 	String choice = input.nextLine();
@@ -23,5 +24,7 @@ public class Decide {
 		multiply.decide();
 	if (choice.equalsIgnoreCase("phone number") || choice.equalsIgnoreCase("number") )
 		number.decide();
+	if (choice.equalsIgnoreCase("dominic system") || choice.equalsIgnoreCase("dom") )
+		dom.decide();
 	}
 }
